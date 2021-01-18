@@ -134,22 +134,22 @@ class EventRepositoryTests {
         assertEquals(0, events.size());
     }
 
-    @Test
-    @Order(7)
-    void testFindByIdExists()
-    {
-        Optional<Event> foundEvent = eventRepository.findById(publishedEvent_id);
-        assertFalse(foundEvent.isEmpty());
-        assertEquals("10km cycling", foundEvent.get().getTitle());
-    }
-
-    @Test
-    @Order(8)
-    void testFindByIdNotExists()
-    {
-        Optional<Event> foundEvent = eventRepository.findById(publishedEvent_id+1);
-        assertTrue(foundEvent.isEmpty());
-    }
+//    @Test
+//    @Order(7)
+//    void testFindByIdExists()
+//    {
+//        Optional<Event> foundEvent = eventRepository.findById(publishedEvent_id);
+//        assertFalse(foundEvent.isEmpty());
+//        assertEquals("10km cycling", foundEvent.get().getTitle());
+//    }
+//
+//    @Test
+//    @Order(8)
+//    void testFindByIdNotExists()
+//    {
+//        Optional<Event> foundEvent = eventRepository.findById(publishedEvent_id+1);
+//        assertTrue(foundEvent.isEmpty());
+//    }
 
     @Test
     @Rollback(value = false)
